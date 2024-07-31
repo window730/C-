@@ -1,0 +1,4 @@
+﻿  test.c
+D:\vs_2022\test_c\bit_test\bit_test\test.c(1983): warning C4716: “removeElement”: 必须返回一个值
+MSVCRTD.lib(exe_main.obj) : error LNK2019: 无法解析的外部符号 main，函数 "int __cdecl invoke_main(void)" (?invoke_main@@YAHXZ) 中引用了该符号
+D:\vs_2022\test_c\bit_test\x64\Debug\bit_test.exe : fatal error LNK1120: 1 个无法解析的外部命令
