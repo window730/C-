@@ -2020,7 +2020,8 @@
  *     struct ListNode *next;
  * };
  */
-//typedef struct ListNode sl;
+//typedef struct ListNode sl;//对链表类型重定义
+//
 //struct ListNode* reverseList(struct ListNode* head)
 //{
 //    if (head == NULL)
@@ -2043,3 +2044,291 @@
 //    }
 //    return p1;
 //}
+
+/**
+ * Definition for singly-linked list.
+ * struct ListNode {
+ *     int val;
+ *     struct ListNode *next;
+ * };
+// */
+//typedef struct ListNode sl;//对链表类型重定义
+//
+//struct ListNode* removeElements(struct ListNode* head, int val)
+//{
+//    if (head == NULL)//判断链表是否为空
+//    {
+//        return head;//为空则返回该链表
+//    }
+//    sl* ptail = NULL;//创建一个新链表 
+//    sl* phead = ptail;//phead用于返回 ptail向后移动执行尾插
+//    sl* pcur = head;//创建一个指针遍历链表 
+//    while (pcur)
+//    {
+//        if (pcur->val != val)//将值不等于val的节点尾插到新链表中 
+//        {
+//            if (phead == NULL)//判断新链表是否为空
+//            {
+//                phead = ptail = pcur;
+//            }
+//            else
+//            {
+//                ptail->next = pcur;//执行尾插操作
+//                ptail = ptail->next;//ptail向后移动
+//            }
+//        }
+//        pcur = pcur->next;//pcur向后遍历
+//    }
+//    if (ptail)//若ptail不为空 则将新链表的尾节点置为空
+//    {
+//        ptail->next = NULL;
+//    }
+//    return phead;//返回新链表的头节点
+//}
+
+/**
+ * Definition for singly-linked list.
+ * struct ListNode {
+ *     int val;
+ *     struct ListNode *next;
+ * };
+ */
+//typedef struct ListNode sl;//对链表类型重定义
+//
+//struct ListNode* reverseList(struct ListNode* head)
+//{
+//    if (head == NULL)//判断链表是否为空 
+//    {
+//        return head;//为空则返回原链表
+//    }
+//    sl* p1 = NULL;//创建三个指针 
+//    sl* p2 = head;//p1 p2用于改变指向
+//    sl* p3 = p2->next;//p3用于记录p2原来的下一个节点
+//
+//    while (p2)
+//    {
+//        p2->next = p1;//将p2的下一个节点改为指向p1
+//        p1 = p2;//p1 p2 p3 向后遍历
+//        p2 = p3;
+//        if (p3)//若p3为空则p2已到达尾节点 p3不再向后遍历
+//        {
+//            p3 = p3->next;
+//        }
+//    }
+//    //跳出循环则p2为空 此时p1为新链表的头节点
+//    return p1;//返回p1
+//}
+
+/**
+ * Definition for singly-linked list.
+ * struct ListNode {
+ *     int val;
+ *     struct ListNode *next;
+ * };
+ */
+//typedef struct ListNode sl;//链表类型重定义
+//struct ListNode* middleNode(struct ListNode* head)
+//{
+//    if (head == NULL)//判断链表是否为空
+//    {
+//        return head;//为空则返回原链表
+//    }
+//    sl* slow = head;//创建快慢指针
+//    sl* fast = head;//同时遍历整个链表
+//    while (fast && fast->next)
+//    {
+//        fast = fast->next->next;//快指针一次移动两步
+//        slow = slow->next;//慢指针一次移动一步
+//    }
+//    //跳出循环则快指针已经遍历整个链表
+//    return slow;
+//}
+
+/**
+ * Definition for singly-linked list.
+ * struct ListNode {
+ *     int val;
+ *     struct ListNode *next;
+ * };
+ */
+//typedef struct ListNode sl; //链表类型重定义
+//struct ListNode* mergeTwoLists(struct ListNode* list1, struct ListNode* list2)
+//{
+//    if (list1 == NULL)//若list1为空则直接返回list2
+//    {
+//        return list2;
+//    }
+//    if (list2 == NULL)//若list2为空则直接返回list1
+//    {
+//        return list1;
+//    }
+//    sl* p1 = list1;//创建两个指针分别遍历list1和list2
+//    sl* p2 = list2;
+//    sl* phead = (sl*)malloc(sizeof(sl));//创建一个新链表并开辟一块内存
+//    sl* ptail = phead;
+//    while (p1 && p2)
+//    {
+//        if (p1->val < p2->val)//判断节点值大小
+//        {
+//            ptail->next = p1;//p1值小则尾插到新链表末端
+//            ptail = ptail->next;//ptail向后移动
+//            p1 = p1->next;//p1向后遍历
+//        }
+//        else
+//        {
+//            ptail->next = p2;// p2值小则尾插到新链表末端
+//            ptail = ptail->next; //ptail向后移动
+//            p2 = p2->next;//p2向后遍历
+//        }
+//    }
+//    //跳出循环则p1或p2有一个遍历结束
+//
+//    if (p1)//p1不为空则还未遍历完
+//    {
+//        ptail->next = p1;//p1剩余部分尾插到新链表末端
+//    }
+//    else//反之则p2还未遍历完
+//    {
+//        ptail->next = p2;//p2剩余部分尾插到新链表末端
+//    }
+//    sl* pcur = phead->next;//记录phead的下一个节点
+//    free(phead);//释放phead申请的内存
+//    phead = NULL;//phead置为空 避免出现野指针
+//    return pcur;//返回记录下来的pcur
+//}
+
+/**
+ * Definition for singly-linked list.
+ * struct ListNode {
+ *     int val;
+ *     struct ListNode *next;
+ * };
+ */
+//typedef struct ListNode sl;//链表类型重定义
+//int kthToLast(struct ListNode* head, int k)
+//{
+//    if (head == NULL)//判断head是否为空
+//    {
+//        return head;//为空则直接返回给定链表
+//    }
+//    sl* slow = head;//创建快慢指针
+//    sl* fast = head;//分别遍历给定链表
+//    while (k--)//快指针先向后移动k步
+//    {
+//        fast = fast->next;
+//    }
+//    while (fast)//快慢指针一起移动
+//    {
+//        fast = fast->next;
+//        slow = slow->next;
+//    }
+//    //快指针遍历结束 跳出循环
+//    return slow->val;//返回慢指针val的值
+//}
+
+/**
+ * Definition for singly-linked list.
+ * struct ListNode {
+ *     int val;
+ *     struct ListNode *next;
+ * };
+ */
+//typedef struct ListNode sl;//链表类型重定义
+//struct ListNode* partition(struct ListNode* head, int x)
+//{
+//    if (head == NULL)//判断链表是否为空
+//    {
+//        return head;//为空则返回给定链表
+//    }
+//    //创建一个用于存放小于x的节点的链表 并开辟一块内存
+//    sl* small_head = (sl*)malloc(sizeof(sl));
+//    sl* small_tail = small_head;
+//    //创建一个用于存放大于x的节点的链表 并开辟一块内存
+//    sl* big_head = (sl*)malloc(sizeof(sl));
+//    sl* big_tail = big_head;
+//    sl* pcur = head;//创建一个指针遍历给定链表
+//    while (pcur)
+//    {
+//        //pcur指向节点的值小于x 则尾插到[小]链表末端
+//        if (pcur->val < x)
+//        {
+//            small_tail->next = pcur;
+//            small_tail = small_tail->next;//small_tail向后移动
+//            pcur = pcur->next;//pcur向后遍历
+//        }
+//        //pcur指向节点的值大于x 则尾插到[大]链表末端
+//        else
+//        {
+//            big_tail->next = pcur;
+//            big_tail = big_tail->next;//big_tail向后移动
+//            pcur = pcur->next;//pcur向后遍历
+//        }
+//    }
+//    //跳出循环 pcur遍历结束
+//    big_tail->next = NULL;//将[大]链表尾节点的下一个节点指向为空
+//    small_tail->next = big_head->next;//拼接[大][小]链表
+//    sl* p = small_head->next;//记录[小]链表的第一个有效节点
+//    free(small_head);//释放[大][小]链表开辟的内存
+//    free(big_head);
+//    small_head = big_head = NULL;//将[大][小]链表头节点置为空 避免野指针
+//    return p;//返回记录下的拼接链表的头节点
+//}
+
+/**
+ * Definition for singly-linked list.
+ * struct ListNode {
+ *     int val;
+ *     struct ListNode *next;
+ * };
+ */
+typedef struct ListNode sl;//链表类型重定义
+
+sl* find_mid_node(sl* head)//创建函数找出链表中间节点
+{
+    sl* slow, * fast;
+    slow = fast = head;
+    while (fast && fast->next)
+    {
+        fast = fast->next->next;
+        slow = slow->next;
+    }
+    return slow;
+}
+sl* reverse_list(sl* head)//创建函数反转链表
+{
+    sl* p1, * p2, * p3;
+    p1 = NULL;
+    p2 = head;
+    p3 = p2->next;
+    while (p2)
+    {
+        p2->next = p1;
+        p1 = p2;
+        p2 = p3;
+        if (p3)
+        {
+            p3 = p3->next;
+        }
+    }
+    return p1;
+}
+bool isPalindrome(struct ListNode* head)
+{
+    if (head == NULL)//判断链表是否为空
+    {
+        return true;//为空则返回true
+    }
+    sl* mid = find_mid_node(head);//找到链表中间节点
+    sl* right = reverse_list(mid);//反转中间节点往后的链表
+    sl* left = head;
+    while (right)//左右指针同时遍历链表 判断值是否相等
+    {
+        if (right->val != left->val)
+        {
+            return false;//值不相等则返回false
+        }
+        right = right->next;//相等则继续遍历
+        left = left->next;
+    }
+    return true;//成功遍历结束 则必定为回文链表 返回true 
+}
