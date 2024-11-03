@@ -2,7 +2,7 @@
 <Project>
   <ProjectOutputs>
     <ProjectOutput>
-      <FullPath>D:\vs_2022\test_c\bit_test\x64\Debug\bit_test.exe</FullPath>
+      <FullPath>D:\vs_2022\C_code\text_c\x64\Debug\bit_test.exe</FullPath>
     </ProjectOutput>
   </ProjectOutputs>
   <ContentFiles />

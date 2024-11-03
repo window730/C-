@@ -2281,54 +2281,292 @@
  *     struct ListNode *next;
  * };
  */
-typedef struct ListNode sl;//链表类型重定义
+//typedef struct ListNode sl;//链表类型重定义
+//
+//sl* find_mid_node(sl* head)//创建函数找出链表中间节点
+//{
+//    sl* slow, * fast;
+//    slow = fast = head;
+//    while (fast && fast->next)
+//    {
+//        fast = fast->next->next;
+//        slow = slow->next;
+//    }
+//    return slow;
+//}
+//sl* reverse_list(sl* head)//创建函数反转链表
+//{
+//    sl* p1, * p2, * p3;
+//    p1 = NULL;
+//    p2 = head;
+//    p3 = p2->next;
+//    while (p2)
+//    {
+//        p2->next = p1;
+//        p1 = p2;
+//        p2 = p3;
+//        if (p3)
+//        {
+//            p3 = p3->next;
+//        }
+//    }
+//    return p1;
+//}
+//bool isPalindrome(struct ListNode* head)
+//{
+//    if (head == NULL)//判断链表是否为空
+//    {
+//        return true;//为空则返回true
+//    }
+//    sl* mid = find_mid_node(head);//找到链表中间节点
+//    sl* right = reverse_list(mid);//反转中间节点往后的链表
+//    sl* left = head;
+//    while (right)//左右指针同时遍历链表 判断值是否相等
+//    {
+//        if (right->val != left->val)
+//        {
+//            return false;//值不相等则返回false
+//        }
+//        right = right->next;//相等则继续遍历
+//        left = left->next;
+//    }
+//    return true;//成功遍历结束 则必定为回文链表 返回true 
+//}
 
-sl* find_mid_node(sl* head)//创建函数找出链表中间节点
+//int main()
+//{
+//	int chicken = 0;
+//	for (chicken = 0; chicken <= 30;chicken++)
+//	{
+//		int rabbit = 30 - chicken;
+//		if ((chicken * 2 + rabbit * 4) == 90)
+//		{
+//			printf("鸡有%d只,兔子有%d只", chicken, rabbit);
+//		}
+//	}
+//	return 0;
+// }
+
+
+ ///** Definition for singly-linked list.*/
+// struct ListNode {
+//     int val;
+//      struct ListNode *next;
+//  };
+// 
+//typedef struct ListNode sl;//链表类型重定义
+//struct ListNode* getIntersectionNode(struct ListNode* headA, 
+//    struct ListNode* headB)
+//{
+//    sl* p1 = headA;//创建两个指针遍历链表
+//    sl* p2 = headB;
+//    int n1 = 0;//统计出每个链表的长度
+//    int n2 = 0;
+//    while (p1)
+//    {
+//        p1 = p1->next;
+//        n1++;
+//    }
+//    while (p2)
+//    {
+//        p2 = p2->next;
+//        n2++;
+//    }
+//    int i = abs(n1 - n2);//计算出两个链表的长度差i
+//    sl* plong = headA;//创建两个指针遍历链表
+//    sl* pshort = headB;
+//    if (n2 > n1)//将链表长度更长的指针定义为plong
+//    {
+//        plong = headB;
+//        pshort = headA;
+//    }
+//    while (i--)//plong先移动i步
+//    {
+//        plong = plong->next;
+//    }
+//    while (pshort && plong)//两个指针同时遍历
+//    {
+//        if (pshort == plong)//判断两个节点是否相等
+//        {
+//            return pshort;//相等则为相交链表
+//        }
+//        pshort = pshort->next;
+//        plong = plong->next;
+//    }
+//    //其中一个指针遍历结束 还未发现相同节点 跳出循环 
+//    return NULL;//不为相交链表
+//}
+
+//#include <stdbool.h>
+// //Definition for singly-linked list.
+//  struct ListNode {
+//      int val;
+//      struct ListNode *next;
+//  };
+// 
+//typedef struct ListNode sl;//链表类型重定义
+//bool hasCycle(struct ListNode* head)
+//{
+//    sl* fast = head;//定义快慢指针
+//    sl* slow = head;
+//    while (fast && fast->next)
+//    {
+//        slow = slow->next;//慢指针一次走一步
+//        fast = fast->next->next;//快指针一次走两步 
+//            if (fast == slow)//快慢指针相遇 则必定有环
+//            {
+//                return true;
+//            }
+//    }
+//    //遍历结束 快慢指针未相遇 则必定不带环
+//    return false;
+
+//// 计算三元组 (a, b, c) 的距离 D
+//int calculate_distance(int a, int b, int c) 
+//{
+//    return abs(a - b) + abs(b - c) + abs(c - a);
+//}
+//// 查找最小距离
+//int find_min_distance(int S1[], int n1, int S2[], int n2, int S3[], int n3)
+//{
+//    int p1 = 0, p2 = 0, p3 = 0; // 三个指针分别指向S1, S2, S3
+//    int min_dist = calculate_distance(S1[0], S2[0], S3[0]); // 初始化最小距离
+//    // 遍历直到某一个数组指针超出边界
+//    while (p1 < n1 && p2 < n2 && p3 < n3) 
+//    {
+//        int a = S1[p1];
+//        int b = S2[p2];
+//        int c = S3[p3];
+//        int currentDist = calculate_distance(a, b, c);
+//        // 更新最小距离
+//        if (currentDist < min_dist) 
+//        {
+//            min_dist = currentDist;
+//        }
+//        // 移动最小值对应的指针
+//        if (a <= b && a <= c)
+//        {
+//            p1++;
+//        }
+//        else if (b <= a && b <= c)
+//        {
+//            p2++;
+//        }
+//        else 
+//        {
+//            p3++;
+//        }
+//    }
+//    return min_dist;
+//}
+//
+//int main() {
+//    int S1[] = { -1, 0, 9 };
+//    int S2[] = { -25, -10, 10, 11 };
+//    int S3[] = { 2, 9, 17, 30, 41 };
+//    //计算每个数组长度
+//    int n1 = sizeof(S1) / sizeof(S1[0]);
+//    int n2 = sizeof(S2) / sizeof(S2[0]);
+//    int n3 = sizeof(S3) / sizeof(S3[0]);
+//    //求最小距离
+//    int min = find_min_distance(S1, n1, S2, n2, S3, n3);
+//    printf("最小距离为: %d\n", min);
+//    return 0;
+////}
+//
+////创建摩尔投票法函数
+//int Moore_Voting(int* arr,int size)
+//{
+//	int candidate = -1;//候选人初始为-1
+//	int count = 0;//记录候选人票数
+//	int* cur = arr;//定义指针遍历数组
+//	while (size--)
+//	{
+//		if (candidate == -1)
+//		{
+//			//如果候选人为-1 则指针指向元素定为候选人
+//			candidate = *cur;
+//			count++;
+//		}
+//		else
+//		{
+//			//若候选人不为0 判断指向元素是否等于候选人
+//			//等于则票数增加1 否则票数减少1
+//			if (candidate == *cur)
+//			{
+//				count++;
+//			}
+//			else
+//			{
+//				count--;
+//			}
+//		}
+//		//投票结束观察票数是否为0 为0则重置候选人
+//		if (count == 0)
+//		{
+//			candidate = -1;
+//		}
+//		//指针向后遍历数组
+//		cur++;
+//	}
+//	//返回候选人
+//	return candidate;
+//}
+//int main()
+//{
+//	//创建数组
+//	int arr1[] = { 0,5,5,3,5,7,5,5 };
+//	int arr2[] = { 0,5,5,3,5,1,5,7 };
+//	//计算数组长度
+//	int n1 = sizeof(arr1) / sizeof(arr1[0]);
+//	int n2 = sizeof(arr2) / sizeof(arr2[0]);
+//	//打印主元素 没有主元素则返回-1
+//	printf("arr1中主元素是%d\n", Moore_Voting(arr1, n1));
+//	printf("arr2中主元素是%d\n", Moore_Voting(arr2, n2));
+//	return 0;
+////}
+//
+//#include <stdlib.h>
+//
+//int* transpose(int(*arr1)[3], int size)
+//{
+//	int row = 0;
+//	int col = 0;
+//	int** arr2 = (int*)malloc(sizeof(int) * size * size);
+//	for (row = 0; row < size; row++)
+//	{
+//		for (col = 0; col < size; col++)
+//		{
+//			arr2[col][row] = arr1[row][col];
+//		}
+//	}
+//	return arr2;
+//}
+//
+//int main()
+//{
+//	int arr[][3] = { {1,2,3},{4,5,6},{7,8,9} };//[[1,2,3],[4,5,6],[7,8,9]]
+//	int size = 3;
+//	int arr_tsp = transpose(arr, size);
+//	return 0;
+//}
+int find_num(int* arr, int size)
 {
-    sl* slow, * fast;
-    slow = fast = head;
-    while (fast && fast->next)
-    {
-        fast = fast->next->next;
-        slow = slow->next;
-    }
-    return slow;
+	int i = 1;
+	while (size--)
+	{
+		
+		arr++;
+	}
+	return i;
 }
-sl* reverse_list(sl* head)//创建函数反转链表
+
+int main()
 {
-    sl* p1, * p2, * p3;
-    p1 = NULL;
-    p2 = head;
-    p3 = p2->next;
-    while (p2)
-    {
-        p2->next = p1;
-        p1 = p2;
-        p2 = p3;
-        if (p3)
-        {
-            p3 = p3->next;
-        }
-    }
-    return p1;
-}
-bool isPalindrome(struct ListNode* head)
-{
-    if (head == NULL)//判断链表是否为空
-    {
-        return true;//为空则返回true
-    }
-    sl* mid = find_mid_node(head);//找到链表中间节点
-    sl* right = reverse_list(mid);//反转中间节点往后的链表
-    sl* left = head;
-    while (right)//左右指针同时遍历链表 判断值是否相等
-    {
-        if (right->val != left->val)
-        {
-            return false;//值不相等则返回false
-        }
-        right = right->next;//相等则继续遍历
-        left = left->next;
-    }
-    return true;//成功遍历结束 则必定为回文链表 返回true 
+	int arr1[] = { 1,2,3 };
+	int arr2[] = { -5,3,2,3 };
+	int n1 = sizeof(arr1) / sizeof(arr1[0]);
+	int n2 = sizeof(arr2) / sizeof(arr2[0]);
+	printf("%d\n%d", find_num(arr1, n1), find_num(arr2, n2));
+	return 0;
 }

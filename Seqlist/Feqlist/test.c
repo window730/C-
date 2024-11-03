@@ -3,24 +3,24 @@
 
 int main()
 {
-	sl s;
-	sl_init(&s);
-	sl_push_front(&s, 1);
-	sl_push_front(&s, 2);
-	sl_push_front(&s, 3);
-	sl_push_front(&s, 4);
-	sl_push_front(&s, 5);
-	sl_push_front(&s, 6);
-	sl_push_insert(&s, 99, 0);
-	sl_push_insert(&s, 88, s.size);
-	sl_push_insert(&s, 99, 3);
-	printf("%d\n",sl_find(&s, 5));
-	printf("%d\n",sl_find(&s, 99));
-	printf("%d\n",sl_find(&s, 77));
-
-
-
-
-	sl_destroy(&s);
+	//创建并定义顺序表
+	sl score;
+	sl_init(&score);
+	//尾插数据 73，90，95，87，100，80
+	sl_push_back(&score, 73);
+	sl_push_back(&score, 90);
+	sl_push_back(&score, 95);
+	sl_push_back(&score, 87);
+	sl_push_back(&score, 100);
+	sl_push_back(&score, 80);
+	//打印顺序表
+	for (int i = 0; i < 6; i++)
+	{
+		printf("%d ", score.arr[i]);
+	}
+	//查找数据90
+	printf("\n90在数组的下标为%d的位置\n",sl_find(&score, 90));
+	//销毁顺序表 防止内存泄露
+	sl_destroy(&score);
 	return 0;
 }

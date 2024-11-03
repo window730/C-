@@ -2,7 +2,7 @@
 <Project>
   <ProjectOutputs>
     <ProjectOutput>
-      <FullPath>D:\vs_2022\test_c\Feqlist\x64\Debug\Feqlist.exe</FullPath>
+      <FullPath>D:\vs_2022\C_code\Seqlist\x64\Debug\Feqlist.exe</FullPath>
     </ProjectOutput>
   </ProjectOutputs>
   <ContentFiles />

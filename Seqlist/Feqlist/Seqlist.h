@@ -4,8 +4,10 @@
 #include <stdlib.h>
 #include <assert.h>
 
+//重定义数据类型
 typedef int sl_dtype;
 
+//定义顺序表
 typedef struct Seqlist
 {
 	sl_dtype* arr;

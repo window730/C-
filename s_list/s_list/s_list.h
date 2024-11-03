@@ -3,7 +3,7 @@
 #include <assert.h>
 
 //重定义数据类型
-typedef int slt_dtype;
+typedef char* slt_dtype;
 
 //定义链表
 typedef struct s_list_node

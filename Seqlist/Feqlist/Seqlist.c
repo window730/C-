@@ -45,6 +45,7 @@ void sl_push_back(sl* ps, sl_dtype x)
 	ps->arr[ps->size++] = x;
 }
 
+
 //头部插入数据
 void sl_push_front(sl* ps, sl_dtype x)
 {
@@ -122,4 +123,3 @@ int sl_find(sl* ps, sl_dtype x)
 	}
 	return -1;
 }
-

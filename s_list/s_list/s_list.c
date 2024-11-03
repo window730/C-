@@ -7,7 +7,7 @@ void slt_print(slt* p_head)
 {
 	while (p_head)
 	{
-		printf("%d->", p_head->date);
+		printf("%s->", p_head->date);
 		p_head = p_head->next;
 	}
 	printf("NULL\n");

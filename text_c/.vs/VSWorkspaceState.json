@@ -1,7 +1,8 @@
 {
   "ExpandedNodes": [
     "",
-    "\\bit_test"
+    "\\bit_test",
+    "\\Debug"
   ],
   "SelectedNode": "\\bit_test\\test.c",
   "PreviewInSolutionExplorer": false

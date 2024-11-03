@@ -1,2 +1,3 @@
 ﻿  test.c
-  s_list.vcxproj -> D:\vs_2022\test_c\s_list\x64\Debug\s_list.exe
+D:\vs_2022\C_code\s_list\s_list\test.c(74,2): warning C4047: “return”:“int”与“void *”的间接级别不同
+  s_list.vcxproj -> D:\vs_2022\C_code\s_list\x64\Debug\s_list.exe
