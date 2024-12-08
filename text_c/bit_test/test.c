@@ -2144,13 +2144,14 @@
 //    return slow;
 //}
 
-/**
- * Definition for singly-linked list.
- * struct ListNode {
- *     int val;
- *     struct ListNode *next;
- * };
- */
+
+ /*Definition for singly-linked list.*/
+// struct ListNode 
+// {
+//      int val;
+//      struct ListNode *next;
+//  };
+// 
 //typedef struct ListNode sl; //链表类型重定义
 //struct ListNode* mergeTwoLists(struct ListNode* list1, struct ListNode* list2)
 //{
@@ -2550,23 +2551,179 @@
 //	int arr_tsp = transpose(arr, size);
 //	return 0;
 //}
-int find_num(int* arr, int size)
+//
+//int find_num(int* arr, int size)
+//{
+//	int i = 0;
+//	//第一次遍历数组 把大小不在[1,size]的数替换为无关值(size + 1)
+//	//无关值不会影响查找
+//	while (i < size)
+//	{
+//		if (arr[i] > size || arr[i] <= 0)
+//		{
+//			arr[i] = size + 1;
+//		}
+//		i++;
+//	}
+//	//第二次遍历 找到大小在[1,size]的数(x) 
+//	//让下标为x-1的数变为原来的负值 已经变过一次的不再重复变换
+//	i = 0;
+//	while (i < size)
+//	{
+//		if (abs(arr[i]) > 0 && abs(arr[i]) <= size && arr[abs(arr[i]) - 1] > 0)
+//		{
+//			arr[abs(arr[i]) - 1] = -arr[abs(arr[i]) - 1];
+//		}
+//		i++;
+//	}
+//	//第三次遍历 找到第一个非负的数 记录下标i 返回i+1
+//	//若全部为负数 返回size+1
+//	i = 0;
+//	while (i < size)
+//	{
+//		if (arr[i] > 0)
+//		{
+//			return i + 1;
+//		}
+//		i++;
+//	}
+//	return size + 1;
+//}
+//
+//int main()
+//{
+//	int arr1[] = { 1,2,3 };
+//	int arr2[] = { -5,3,2,3};
+//	int n1 = sizeof(arr1) / sizeof(arr1[0]);
+//	int n2 = sizeof(arr2) / sizeof(arr2[0]);
+//	int a = find_num(arr1, n1);
+//	int b = find_num(arr2, n2); 
+//	printf("arr1未出现的最小正整数是%d\n", a);
+//	printf("arr12未出现的最小正整数是%d\n", b);
+//	return 0;
+
+//int climb_stairs(int n)
+//{
+//    //当阶梯数为0或1 直接返回1
+//    if (n == 0 || n == 1)
+//    {
+//        return 1;
+//    }
+//    //递归 返回n-1阶和n-2阶的次数之和
+//    return climb_stairs(n - 1) + climb_stairs(n - 2);
+//}
+//
+//int main() 
+//{
+//    int n;
+//    // 输入楼梯的阶数
+//    while (1)
+//    {
+//        printf("请输入楼梯的阶数n: ");
+//        scanf("%d", &n);
+//        // 计算并输出结果
+//        printf("爬到第 %d 阶的方式有 %d 种\n", n, climb_stairs(n));
+//    }
+//    return 0;
+//}
+//
+//#include <stdlib.h>
+//int* find_num(int* arr, int size, int targer)
+//{
+//	//开辟8个字节(两个整型)的空间用来存放下标
+//	int* num = (int*)malloc(8);
+//	//断言确保内存开辟成功
+//	assert(num);
+//	int i = 0;
+//	//遍历数组
+//	while (i < size)
+//	{
+//		//找到小于目标值的数
+//		if (arr[i] <= targer)
+//		{
+//			int j = 0;
+//			//再次从头遍历数组
+//			while (j < size)
+//			{
+//				//找到和为目标值的两个数 并返回下标
+//				if (arr[j] + arr[i] == targer)
+//				{
+//					num[0] = i;
+//					num[1] = j;
+//					return num;
+//				}
+//				j++;
+//			}
+//		}
+//		i++;
+//	}
+//	//找不到和为目标值的数 释放内存并返回空指针
+//	free(num);
+//	return NULL;
+//}
+//int main()
+//{
+//	int arr1[] = { 2,7,11,15 };
+//	int arr2[] = { 1,4,5,9,8 };
+//	int target1 = 9;
+//	int target2 = 14;
+//	int size1 = sizeof(arr1) / sizeof(arr1[0]);
+//	int size2 = sizeof(arr2) / sizeof(arr2[0]);
+//	int* num1 = find_num(arr1, size1, target1);
+//	int* num2 = find_num(arr2, size2, target2);
+//	printf("[%d] [%d]\n", num1[0], num1[1]); //返回2的下标[0] 7的下标[1]
+//	printf("[%d] [%d]\n", num2[0], num2[1]); //返回5的下标[2] 9的下标[3]
+//	free(num1);
+//	free(num2);
+//	return 0;
+//}
+
+#include <stdio.h>
+#include <stdlib.h> // 包含动态内存分配函数的头文件
+
+// 计数排序算法：将数组 a 中的 n 个记录排序后存入 b 中
+void count_sort(int a[], int b[], int n)
 {
-	int i = 1;
-	while (size--)
-	{
-		
-		arr++;
-	}
-	return i;
+    int count; // 统计计数值
+    for (int i = 0; i < n; i++) 
+    {
+        count = 0; // 初始化计数值
+        for (int j = 0; j < n; j++) 
+        {
+            if (a[j] < a[i]) 
+            {
+                count++; // 如果 a[j] 比 a[i] 小，则计数加 1
+            }
+        }
+        b[count] = a[i]; // 根据计数值将 a[i] 放入 b 中
+    }
 }
 
-int main()
+int main() 
 {
-	int arr1[] = { 1,2,3 };
-	int arr2[] = { -5,3,2,3 };
-	int n1 = sizeof(arr1) / sizeof(arr1[0]);
-	int n2 = sizeof(arr2) / sizeof(arr2[0]);
-	printf("%d\n%d", find_num(arr1, n1), find_num(arr2, n2));
-	return 0;
+    // 定义输入数组
+    int a[] = { 7, 2, 9, 4, 3, 6, 1 };
+    int n = sizeof(a) / sizeof(a[0]); // 计算数组长度
+
+    // 动态分配内存来存储排序结果
+    int* b = (int*)malloc(n * sizeof(int));
+    if (b == NULL) 
+    { // 检查内存分配是否成功
+        printf("内存分配失败！\n");
+        return -1;
+    }
+
+    // 调用计数排序函数
+    count_sort(a, b, n);
+
+    // 输出排序结果
+    printf("排序后的数组：");
+    for (int i = 0; i < n; i++) 
+    {
+        printf("%d ", b[i]);
+    }
+
+    // 释放动态分配的内存
+    free(b);
+    return 0;
 }

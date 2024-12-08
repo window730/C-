@@ -1,0 +1,86 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "D:\\vs_2022\\C_code\\Queue\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{2E0B4E37-B5BC-469F-A16A-2740522BD6AA}|Queue\\Queue.vcxproj|D:\\vs_2022\\C_code\\Queue\\Queue\\test.c||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{2E0B4E37-B5BC-469F-A16A-2740522BD6AA}|Queue\\Queue.vcxproj|solutionrelative:Queue\\test.c||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2E0B4E37-B5BC-469F-A16A-2740522BD6AA}|Queue\\Queue.vcxproj|D:\\vs_2022\\C_code\\Queue\\Queue\\queue.c||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{2E0B4E37-B5BC-469F-A16A-2740522BD6AA}|Queue\\Queue.vcxproj|solutionrelative:Queue\\queue.c||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2E0B4E37-B5BC-469F-A16A-2740522BD6AA}|Queue\\Queue.vcxproj|D:\\vs_2022\\C_code\\Queue\\Queue\\queue.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{2E0B4E37-B5BC-469F-A16A-2740522BD6AA}|Queue\\Queue.vcxproj|solutionrelative:Queue\\queue.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 1,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedHeight": 931,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "test.c",
+              "DocumentMoniker": "D:\\vs_2022\\C_code\\Queue\\Queue\\test.c",
+              "RelativeDocumentMoniker": "Queue\\test.c",
+              "ToolTip": "D:\\vs_2022\\C_code\\Queue\\Queue\\test.c",
+              "RelativeToolTip": "Queue\\test.c",
+              "ViewState": "AQIAABIAAAAAAAAAAAAAABcAAAA7AAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000423|",
+              "WhenOpened": "2024-12-07T12:44:33.294Z",
+              "IsPinned": true,
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "queue.c",
+              "DocumentMoniker": "D:\\vs_2022\\C_code\\Queue\\Queue\\queue.c",
+              "RelativeDocumentMoniker": "Queue\\queue.c",
+              "ToolTip": "D:\\vs_2022\\C_code\\Queue\\Queue\\queue.c",
+              "RelativeToolTip": "Queue\\queue.c",
+              "ViewState": "AQIAAFEAAAAAAAAAAAAAAFsAAAACAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000423|",
+              "WhenOpened": "2024-12-07T12:44:23.208Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "queue.h",
+              "DocumentMoniker": "D:\\vs_2022\\C_code\\Queue\\Queue\\queue.h",
+              "RelativeDocumentMoniker": "Queue\\queue.h",
+              "ToolTip": "D:\\vs_2022\\C_code\\Queue\\Queue\\queue.h",
+              "RelativeToolTip": "Queue\\queue.h",
+              "ViewState": "AQIAABsAAAAAAAAAAAAAACsAAAAWAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2024-12-07T12:44:10.165Z",
+              "EditorCaption": ""
+            }
+          ]
+        },
+        {
+          "DockedHeight": 41,
+          "SelectedChildIndex": -1,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{d78612c7-9962-4b83-95d9-268046dad23a}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{34e76e81-ee4a-11d0-ae2e-00a0c90fffc3}"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
