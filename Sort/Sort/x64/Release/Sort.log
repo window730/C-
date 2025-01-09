@@ -1,0 +1,3 @@
+﻿  test.c
+D:\vs_2022\C_code\Sort\Sort\test.c(16,8): warning C4244: “函数”: 从“time_t”转换到“unsigned int”，可能丢失数据
+LINK : fatal error LNK1104: 无法打开文件“D:\vs_2022\C_code\Sort\x64\Release\Sort.exe”

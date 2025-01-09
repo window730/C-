@@ -1,0 +1,85 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "D:\\vs_2022\\C_code\\Sort\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{B587B1BD-CB5A-4543-AAFF-79013BE534E3}|Sort\\Sort.vcxproj|D:\\vs_2022\\C_code\\Sort\\Sort\\sort.c||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{B587B1BD-CB5A-4543-AAFF-79013BE534E3}|Sort\\Sort.vcxproj|solutionrelative:Sort\\sort.c||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B587B1BD-CB5A-4543-AAFF-79013BE534E3}|Sort\\Sort.vcxproj|D:\\vs_2022\\C_code\\Sort\\Sort\\sort.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{B587B1BD-CB5A-4543-AAFF-79013BE534E3}|Sort\\Sort.vcxproj|solutionrelative:Sort\\sort.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B587B1BD-CB5A-4543-AAFF-79013BE534E3}|Sort\\Sort.vcxproj|D:\\vs_2022\\C_code\\Sort\\Sort\\test.c||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{B587B1BD-CB5A-4543-AAFF-79013BE534E3}|Sort\\Sort.vcxproj|solutionrelative:Sort\\test.c||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 1,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedHeight": 931,
+          "SelectedChildIndex": 1,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "test.c",
+              "DocumentMoniker": "D:\\vs_2022\\C_code\\Sort\\Sort\\test.c",
+              "RelativeDocumentMoniker": "Sort\\test.c",
+              "ToolTip": "D:\\vs_2022\\C_code\\Sort\\Sort\\test.c",
+              "RelativeToolTip": "Sort\\test.c",
+              "ViewState": "AQIAABgAAAAAAAAAAAAAACQAAAABAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000423|",
+              "WhenOpened": "2024-12-22T11:57:55.392Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "sort.c",
+              "DocumentMoniker": "D:\\vs_2022\\C_code\\Sort\\Sort\\sort.c",
+              "RelativeDocumentMoniker": "Sort\\sort.c",
+              "ToolTip": "D:\\vs_2022\\C_code\\Sort\\Sort\\sort.c",
+              "RelativeToolTip": "Sort\\sort.c",
+              "ViewState": "AQIAAJ8AAAAAAAAAAAAmwK0AAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000423|",
+              "WhenOpened": "2024-12-22T11:57:43.264Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "sort.h",
+              "DocumentMoniker": "D:\\vs_2022\\C_code\\Sort\\Sort\\sort.h",
+              "RelativeDocumentMoniker": "Sort\\sort.h",
+              "ToolTip": "D:\\vs_2022\\C_code\\Sort\\Sort\\sort.h",
+              "RelativeToolTip": "Sort\\sort.h",
+              "ViewState": "AQIAAAwAAAAAAAAAAAAAABoAAAAkAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2024-12-22T11:57:31.827Z",
+              "EditorCaption": ""
+            }
+          ]
+        },
+        {
+          "DockedHeight": 41,
+          "SelectedChildIndex": -1,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{d78612c7-9962-4b83-95d9-268046dad23a}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{34e76e81-ee4a-11d0-ae2e-00a0c90fffc3}"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
